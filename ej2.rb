@@ -14,7 +14,7 @@ if type.eql?('--p')
 elsif type.eql?('--n')
     blast = Bio::Blast.remote('blastn', 'dbest', '-e 0.0001', 'genomenet')
 else
-  puts 'invalid params types are --p and --n'
+  puts 'invalid params types are Proteins --p and Nucleotides --n'
   exit
 end
 
