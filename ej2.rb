@@ -9,12 +9,12 @@ end
 
 type = ARGV[2]
 
-if type.eql?('--p') || type.eql?('--protein')
+if type.eql?('--p')
     blast = Bio::Blast.remote('blastp', 'swissprot', '-e 0.0001', 'genomenet')
-elsif type.eql?('--n') || type.eql?('--nucelotide')
+elsif type.eql?('--n')
     blast = Bio::Blast.remote('blastn', 'dbest', '-e 0.0001', 'genomenet')
 else
-  puts 'invalid params types are --prot and --nuc'
+  puts 'invalid params types are --p and --n'
   exit
 end
 
